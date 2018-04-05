@@ -2,21 +2,21 @@ version: '2'
 
 services:
   reverseproxy:
-    image: reverseproxy:1.0
+    image: reverseproxy:1.1
     ports: 
       - "80:80"
     restart: always
   nodeapp:
-    image: nodejs-app:1.0
+    image: nodejs-app:1.1
     ports:
       - "8080:8080"
-#  mysql:
-#    image: mysql
-#    ports:
-#      - "3306:3306"
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#    volumes:
-#      - db_data:/var/lib/mysql
-#volumes:
-#  db_data:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:

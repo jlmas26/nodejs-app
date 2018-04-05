@@ -1,4 +1,4 @@
-CREATE DATABASE `notes`
+CREATE DATABASE `notes`;
 
 CREATE TABLE `notes`.`Note` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -6,3 +6,8 @@ CREATE TABLE `notes`.`Note` (
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+
+CREATE USER 'notes-api' IDENTIFIED BY 'notes-api';
+
+GRANT ALL PRIVILEGES ON *.* TO 'notes-api';
