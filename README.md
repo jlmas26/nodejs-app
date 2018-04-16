@@ -23,7 +23,7 @@ Finalizado o build dos containers, executar docker-compose para subir o ambiente
 docker-compose -f docke-compose.yaml up -d
 
 ```
-Execute "docker ps -a" para confirmar se oa containeres subiram corretamente.
+Execute "docker ps -a" para confirmar se os containers subiram corretamente.
 
 As permissões necessárias para aplicação no banco estão no script database_schema.sql. Para conectar ao banco execute:
 ```
