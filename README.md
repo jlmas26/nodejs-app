@@ -17,7 +17,7 @@ docker build -t "reverseproxy:1.0" proxy/.
 
 ```
 
-Finalizado o build dos containers, executar docker-compose para subir o ambiente da aplicação
+Finalizado o build dos containers, executar **docker-compose** para subir o ambiente da aplicação
 
 ```
 docker-compose -f docke-compose.yaml up -d
@@ -25,13 +25,13 @@ docker-compose -f docke-compose.yaml up -d
 ```
 Execute "docker ps -a" para confirmar se os containers subiram corretamente.
 
-As permissões necessárias para aplicação no banco estão no script database_schema.sql. Para conectar ao banco execute:
+As permissões necessárias no banco MySQL estão no script **database_schema.sql**. Para conectar ao banco execute:
 ```
 docker exec -it nodejsapp_mysql_1 mysql -uroot -p
 ```
-OBS: nodejapp_mysql_1 é o nome do container. Mude caso tenha definido no seu docker-compose com outro nome
+OBS: nodejapp_mysql_1 é o nome padrão do container. Mude caso tenha definido no seu docker-compose com outro nome
 
-Tendo executado com sucesso todos os procedimentos. Execute no seu terminal os comandos abaixo para validar a aplicação:
+Tendo executado com sucesso todos os procedimentos, execute no seu terminal os comandos abaixo para validar a aplicação:
 ```
 # Para consultar a aplicação
 curl -X GET http://localhost/notes
