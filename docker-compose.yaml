@@ -2,12 +2,12 @@ version: '2'
 
 services:
   reverseproxy:
-    image: reverseproxy:1.1
+    image: reverseproxy:1.0
     ports: 
       - "80:80"
     restart: always
   nodeapp:
-    image: nodejs-app:1.1
+    image: nodejs-app:1.0
     ports:
       - "8080:8080"
   mysql:
