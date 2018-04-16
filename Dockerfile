@@ -1,6 +1,6 @@
 FROM node
 
-MAINTAINER Jorge Santos <jlmas26@gmail.com.>
+LABEL maintainer="Jorge Santos <jlmas26@gmail.com>"
 
 RUN npm install npm@latest -g
 
